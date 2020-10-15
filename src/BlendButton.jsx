@@ -13,32 +13,28 @@ const BlendButton = ({
 
   const [isHover, setIsHover] = useState(false);
   const [isMouseDown, setIsMouseDown] = useState(false);
-  const [isBackgroundGradient, setIsBackgroundGradient] = useState(false);
+  const [isBackgroundImage, setIsBackgroundImage] = useState(false);
   const [parentBackground, setParentBackground] = useState("");
 
   useEffect(() => {
+    //locating the target of the rendered Blend Button component
     const target = document.querySelector(`#blend-btn-${id}`);
     const parent = target.parentElement;
     const background = window.getComputedStyle(parent).backgroundColor;
     const backgroundImage = window.getComputedStyle(parent).backgroundImage;
-    // console.log("background:", background);
-    // console.log("backgroundImage:", backgroundImage);
 
     //checks for linear-gradient background
     if (backgroundImage !== "none") {
-      setIsBackgroundGradient(true);
+      setIsBackgroundImage(true);
       return setParentBackground(backgroundImage);
     }
 
+    //handling if no background color is set
     if (background === "rgba(0, 0, 0, 0)" && backgroundImage === "none")
       return setParentBackground("white");
 
     setParentBackground(background);
-
-    //handling if no background color is set
-  }, [isBackgroundGradient, id]);
-  console.log("isBackgroundGradient:", isBackgroundGradient);
-  console.log("parentBackground:", parentBackground);
+  }, [isBackgroundImage, id]);
 
   const blendBtnStyle = {
     border: "none",
@@ -46,7 +42,7 @@ const BlendButton = ({
     cursor: "pointer",
     color: parentBackground,
     transition: "all 0.3s",
-    transform: isMouseDown ? "scale(.9)" : "",
+    transform: isMouseDown && "scale(.9)",
 
     //props passed in by user
     borderRadius,
@@ -62,12 +58,9 @@ const BlendButton = ({
     border: `solid 1px ${colorMain}`,
   };
 
-  // if (isBackgroundGradient) {
-  //   blendBtnStyle.WebKitBackgroundClip = "text";
-  //   blendBtnStyle.WebkitTextFillColor = "transparent";
-  // }
-
-  const gradientText = {
+  const backgroundImageText = {
+    //black fallback color
+    backgroundColor: "#000",
     backgroundImage: parentBackground,
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
@@ -75,17 +68,18 @@ const BlendButton = ({
 
   return (
     <button
-      className="blend-btn"
       id={`blend-btn-${id}`}
+      className="blend-btn"
       onMouseOver={() => setIsHover(true)}
       onMouseOut={() => setIsHover(false)}
       onMouseDown={() => setIsMouseDown(true)}
       onMouseUp={() => setIsMouseDown(false)}
       style={isHover ? blendBtnHoverStyle : blendBtnStyle}
     >
-      {/* if gradient, wrap in TextGradient, if not just text */}
-      {isBackgroundGradient ? (
-        <p style={isHover ? { color: colorMain } : gradientText}>{btnText}</p>
+      {isBackgroundImage ? (
+        <p style={isHover ? { color: colorMain } : backgroundImageText}>
+          {btnText}
+        </p>
       ) : (
         btnText
       )}
@@ -94,9 +88,9 @@ const BlendButton = ({
 };
 
 BlendButton.defaultProps = {
-  padding: "1vw",
-  colorMain: "black",
   btnText: "Submit",
+  padding: ".8vw 2vw",
+  colorMain: "black",
 };
 
 export default BlendButton;

@@ -1,69 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Blend Buttons
 
-## Available Scripts
+### `Intro`
 
-In the project directory, you can run:
+Simple button component that will match its aesthetic to its parents'.
+(React functional component button element that adjusts its styles to its direct parents' styles.)<br />
 
-### `npm start`
+The button's **font-color** matches that of its direct **parent's background color**. The button's **background-color** is assigned by user via **"colorMain" prop**. **While hovering**, the background will match that of its direct parent, and the font-color and border will transition to "colorMain" prop color.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### `Installation`
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### npm
 
-### `npm test`
+`npm i blend-buttons`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Usage`
 
-### `npm run build`
+    import BlendButton from "blend-buttons";
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    //All props being utilized
+    <BlendButton
+    	btnText={"Blend Button"}
+    	colorMain={"goldenrod"}
+    	borderRadius={"10px"}
+    	padding={"3vw"}
+    	fontSize={"18px"}
+    />
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+    //No props
+    <Blendbutton />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `Configuration`<br />
 
-### `npm run eject`
+You can configure your BlendButton via props...
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- btnText: Text to be displayed in button.
+  - Type: String.
+  - Default value is "Submit".
+- colorMain: Color assigned to button background-color, btnText color, and border while being hovered.
+  - Type: String.
+  - Default Value is "black"
+- borderRadius: Sets button border-radius.
+  - Type: String.
+  - Default value is "0px".
+- padding: Sets buttons padding.
+  - Type: String.
+  - Default value is ".8vw 2vw".
+- fontSize: Sets buttons font-size.
+  - Type: String.
+  - Default value is button element default size.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# blend-button
+# Blend Buttons

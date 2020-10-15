@@ -18,6 +18,7 @@ function App() {
         />
       </div>
       <div className="wrapper three">
+        <h2>Handles icons</h2>
         <BlendButton
           btnText={<FaBeer />}
           colorMain={"#FEE715FF"}
@@ -27,8 +28,8 @@ function App() {
       </div>
       <div className="wrapper four">
         <BlendButton
-          btnText={"Submit"}
-          colorMain={"pink"}
+          btnText={"Handles gradient backgrounds"}
+          colorMain={"#fff"}
           borderRadius={"20px"}
           fontSize={"20px"}
         />
@@ -40,9 +41,17 @@ function App() {
           fontSize={"16px"}
         />
         <BlendButton
-          btnText={"in same parent"}
+          btnText={"...in same parent"}
           colorMain={"#fff"}
           fontSize={"16px"}
+        />
+      </div>
+      <div className="wrapper six">
+        <BlendButton
+          btnText={"Works with background images"}
+          colorMain={"red"}
+          fontSize={"20px"}
+          padding={"10px"}
         />
       </div>
     </div>
