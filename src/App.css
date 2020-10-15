@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.App {
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.wrapper {
+  height: 30vh;
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px;
+
+  box-shadow: 2px 2px 5px gray;
+}
+
+.one {
+  border: solid 1px black;
+}
+
+.two {
+  background: #5b84b1ff;
+}
+
+.three {
+  background: #101820ff;
+  display: flex;
+  flex-direction: column;
+}
+
+.three h2 {
+  color: #fee715ff;
+}
+
+.four {
+  background-image: linear-gradient(#f6ea7bff, #ffba52ff, #e683a9ff);
+}
+
+.five {
+  background: #2bae66ff;
+}
+
+.five button {
+  margin: 8px;
+}
+
+.six {
+  background-image: url("https://resilientblog.co/wp-content/uploads/2019/07/sky-quotes.jpg");
+}
+
+/* Class that applies to all Blend Buttons */
+.blend-btn {
+}

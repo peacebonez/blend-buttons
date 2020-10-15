@@ -24,7 +24,7 @@ yarn-error.log*
 
 netlify.toml
 
-/public
-/src*
-!/src/BlendButtons.jsx
-!/src/blendbuttons.jpg
+# /public
+# /src*
+# !/src/BlendButtons.jsx
+# !/src/blendbuttons.jpg
