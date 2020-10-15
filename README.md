@@ -51,5 +51,6 @@ You can configure your BlendButton via props...
   - Default value is button element default size.
 
   ![Blend Buttons logo scrounged from google images!](src/blendbuttons.jpg =100x100)
+  <img src="src/blendbuttons.jpg"  width="120" height="120">
 
 # Blend Buttons
