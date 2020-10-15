@@ -3,8 +3,6 @@ import "./App.css";
 import { FaBeer } from "react-icons/fa";
 import BlendButton from "./BlendButton";
 
-console.log(<FaBeer /> + " hey");
-
 function App() {
   return (
     <div className="App">
@@ -28,13 +26,12 @@ function App() {
         />
       </div>
       <div className="wrapper four">
-        <div className="box2">
-          <BlendButton
-            btnText={"Submit"}
-            colorMain={"orange"}
-            borderRadius={"20px"}
-          />
-        </div>
+        <BlendButton
+          btnText={"Submit"}
+          colorMain={"pink"}
+          borderRadius={"20px"}
+          fontSize={"20px"}
+        />
       </div>
       <div className="wrapper five">
         <BlendButton

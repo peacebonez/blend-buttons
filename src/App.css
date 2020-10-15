@@ -2,12 +2,20 @@
   box-sizing: border-box;
 }
 
-.App {
-  text-align: center;
-  height: 100vh;
+#root {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.App {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .wrapper {
@@ -16,6 +24,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 1vw;
+  box-shadow: 2px 2px 5px gray;
 }
 
 .one {
@@ -31,7 +41,7 @@
 }
 
 .four {
-  background: palegoldenrod;
+  background-image: linear-gradient(red, blue, green);
 }
 
 .five {
@@ -42,15 +52,6 @@
   margin: 8px;
 }
 
-.box2 {
-  height: 10vh;
-  width: 10vw;
-  /* background: white; */
-  background-image: linear-gradient(red, blue, green);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .blend-btn {
 }
 

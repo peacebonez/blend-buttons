@@ -21,19 +21,24 @@ const BlendButton = ({
     const parent = target.parentElement;
     const background = window.getComputedStyle(parent).backgroundColor;
     const backgroundImage = window.getComputedStyle(parent).backgroundImage;
+    // console.log("background:", background);
+    // console.log("backgroundImage:", backgroundImage);
+
+    //checks for linear-gradient background
+    if (backgroundImage !== "none") {
+      setIsBackgroundGradient(true);
+      return setParentBackground(backgroundImage);
+    }
+
+    if (background === "rgba(0, 0, 0, 0)" && backgroundImage === "none")
+      return setParentBackground("white");
+
+    setParentBackground(background);
 
     //handling if no background color is set
-    if (background === "rgba(0, 0, 0, 0)") return setParentBackground("white");
-
-    if (backgroundImage === "none") {
-      setParentBackground(background);
-    } else {
-      setIsBackgroundGradient(true);
-      setParentBackground(backgroundImage);
-    }
   }, [isBackgroundGradient, id]);
-  // console.log("isBackgroundGradient:", isBackgroundGradient);
-  // console.log("parentBackground:", parentBackground);
+  console.log("isBackgroundGradient:", isBackgroundGradient);
+  console.log("parentBackground:", parentBackground);
 
   const blendBtnStyle = {
     border: "none",
@@ -48,10 +53,6 @@ const BlendButton = ({
     background: colorMain,
     padding,
     fontSize,
-
-    // WebkitBackgroundClip: "text",
-    // WebkitTextFillColor: "transparent",
-    // color: "-webkit-linear-gradient(#eee, #333)",
   };
 
   const blendBtnHoverStyle = {
@@ -59,6 +60,17 @@ const BlendButton = ({
     background: "transparent",
     color: colorMain,
     border: `solid 1px ${colorMain}`,
+  };
+
+  // if (isBackgroundGradient) {
+  //   blendBtnStyle.WebKitBackgroundClip = "text";
+  //   blendBtnStyle.WebkitTextFillColor = "transparent";
+  // }
+
+  const gradientText = {
+    backgroundImage: parentBackground,
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
   };
 
   return (
@@ -72,7 +84,11 @@ const BlendButton = ({
       style={isHover ? blendBtnHoverStyle : blendBtnStyle}
     >
       {/* if gradient, wrap in TextGradient, if not just text */}
-      {btnText}
+      {isBackgroundGradient ? (
+        <p style={isHover ? { color: colorMain } : gradientText}>{btnText}</p>
+      ) : (
+        btnText
+      )}
     </button>
   );
 };
