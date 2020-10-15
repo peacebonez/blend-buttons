@@ -1,14 +1,11 @@
 {
-  "name": "custom-btn",
+  "name": "react-blend-buttons",
   "version": "0.1.0",
+  "main": "/src/BlendButton.jsx",
+  "description": "React buttons that adjust to parent's style.",
+  "author": "https://github.com/peacebonez/",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.5",
-    "enzyme-to-json": "^3.6.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-icons": "^3.11.0",
@@ -36,6 +33,12 @@
     ]
   },
   "devDependencies": {
-    "react-test-renderer": "^16.14.0"
+    "react-test-renderer": "^16.14.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "enzyme-to-json": "^3.6.1"
   }
 }
