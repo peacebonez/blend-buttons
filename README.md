@@ -50,6 +50,6 @@ You can configure your BlendButton via props...
   - Type: String.
   - Default value is button element default size.
 
-  ![Blend Buttons logo scrounged from google images!](src/blendbuttons.jpg =100x)
+  ![Blend Buttons logo scrounged from google images!](src/blendbuttons.jpg =100x100)
 
 # Blend Buttons
