@@ -9,6 +9,10 @@ Simple button component that will match its aesthetic to its parents'.
 
 The button's **font-color** matches that of its direct **parent's background color**. The button's **background-color** is assigned by user via **"colorMain" prop**. **While hovering**, the background will match that of its direct parent, and the font-color and border will transition to "colorMain" prop color.
 
+### Demo
+
+Demo on Netlify [Blend Buttons Demo](https://loving-edison-6a8a92.netlify.app/)
+
 ### `Installation`
 
 ### npm
