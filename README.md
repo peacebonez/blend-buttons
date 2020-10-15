@@ -1,11 +1,17 @@
 ## Blend Buttons
 
+  <img src="src/blendbuttons.jpg"  width="120" height="120">
+
 ### `Intro`
 
 Simple button component that will match its aesthetic to its parents'.
 (React functional component button element that adjusts its styles to its direct parents' styles.)<br />
 
 The button's **font-color** matches that of its direct **parent's background color**. The button's **background-color** is assigned by user via **"colorMain" prop**. **While hovering**, the background will match that of its direct parent, and the font-color and border will transition to "colorMain" prop color.
+
+### Demo
+
+Demo on Netlify [Blend Buttons Demo](https://loving-edison-6a8a92.netlify.app/)
 
 ### `Installation`
 
@@ -49,7 +55,5 @@ You can configure your BlendButton via props...
 
   - Type: String.
   - Default value is button element default size.
-
-  ![Blend Buttons logo scrounged from google images!](src/blendbuttons.jpg =100x)
 
 # Blend Buttons
