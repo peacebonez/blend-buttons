@@ -1,4 +1,5 @@
 ## Blend Buttons
+  <img src="src/blendbuttons.jpg"  width="120" height="120">
 
 ### `Intro`
 
@@ -49,6 +50,6 @@ You can configure your BlendButton via props...
 
   - Type: String.
   - Default value is button element default size.
-  <img src="src/blendbuttons.jpg"  width="120" height="120">
+
 
 # Blend Buttons
