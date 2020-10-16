@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { FaBeer } from "react-icons/fa";
 import BlendButton from "./BlendButton";
 
 function App() {
+  const [beerClicked, setIsBeerClicked] = useState(false);
   return (
     <div className="App">
       <div className="wrapper one">
@@ -18,8 +19,10 @@ function App() {
         />
       </div>
       <div className="wrapper three">
-        <h2>Handles icons</h2>
+        <h2>Handles icons and events.</h2>
+        {beerClicked && <h2>Cheers!</h2>}
         <BlendButton
+          onClick={() => setIsBeerClicked(true)}
           btnText={<FaBeer />}
           colorMain={"#FEE715FF"}
           borderRadius={"10px"}

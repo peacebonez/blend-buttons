@@ -1,10 +1,9 @@
 {
   "name": "react-blend-buttons",
-  "version": "0.1.0",
+  "version": "1.0.3",
   "main": "/src/BlendButton.jsx",
   "description": "React buttons that adjust to parent's style.",
-  "author": "https://github.com/peacebonez/",
-  "private": true,
+  "author": "Kevin Pariso <kmpariso12@gmail.com> https://github.com/peacebonez/",
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
