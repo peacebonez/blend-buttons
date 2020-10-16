@@ -115,47 +115,48 @@ module.exports = (() => {
             a = e.borderRadius,
             i = e.padding,
             l = e.fontSize,
-            b = Math.random().toString(36).substr(2, 4),
-            s = c((0, n.useState)(!1), 2),
-            d = s[0],
-            f = s[1],
-            p = c((0, n.useState)(!1), 2),
-            y = p[0],
-            g = p[1],
-            m = c((0, n.useState)(!1), 2),
-            v = m[0],
-            O = m[1],
-            S = c((0, n.useState)(""), 2),
-            j = S[0],
-            w = S[1];
+            b = e.onClick,
+            s = Math.random().toString(36).substr(2, 4),
+            d = c((0, n.useState)(!1), 2),
+            f = d[0],
+            p = d[1],
+            y = c((0, n.useState)(!1), 2),
+            g = y[0],
+            m = y[1],
+            v = c((0, n.useState)(!1), 2),
+            O = v[0],
+            S = v[1],
+            j = c((0, n.useState)(""), 2),
+            w = j[0],
+            h = j[1];
           (0, n.useEffect)(
             function () {
-              var e = document.querySelector("#blend-btn-".concat(b))
+              var e = document.querySelector("#blend-btn-".concat(s))
                   .parentElement,
                 t = window.getComputedStyle(e).backgroundColor,
                 r = window.getComputedStyle(e).backgroundImage;
               return "none" !== r
-                ? (O(!0), w(r))
+                ? (S(!0), h(r))
                 : "rgba(0, 0, 0, 0)" === t && "none" === r
-                ? w("white")
-                : void w(t);
+                ? h("white")
+                : void h(t);
             },
-            [v, b]
+            [O, s]
           );
-          var h = {
+          var P = {
               border: "none",
               outline: "none",
               cursor: "pointer",
-              color: j,
+              color: w,
               transition: "all 0.3s",
-              transform: y && "scale(.9)",
+              transform: g && "scale(.9)",
               borderRadius: a,
               background: r,
               padding: i,
               fontSize: l,
             },
-            P = u(
-              u({}, h),
+            k = u(
+              u({}, P),
               {},
               {
                 background: "transparent",
@@ -163,32 +164,33 @@ module.exports = (() => {
                 border: "solid 1px ".concat(r),
               }
             ),
-            k = {
+            x = {
               backgroundColor: "#000",
-              backgroundImage: j,
+              backgroundImage: w,
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             };
           return o().createElement(
             "button",
             {
-              id: "blend-btn-".concat(b),
+              id: "blend-btn-".concat(s),
               className: "blend-btn",
+              onClick: b,
               onMouseOver: function () {
-                return f(!0);
+                return p(!0);
               },
               onMouseOut: function () {
-                return f(!1);
+                return p(!1);
               },
               onMouseDown: function () {
-                return g(!0);
+                return m(!0);
               },
               onMouseUp: function () {
-                return g(!1);
+                return m(!1);
               },
-              style: d ? P : h,
+              style: f ? k : P,
             },
-            v ? o().createElement("p", { style: d ? { color: r } : k }, t) : t
+            O ? o().createElement("p", { style: f ? { color: r } : x }, t) : t
           );
         };
         b.defaultProps = {

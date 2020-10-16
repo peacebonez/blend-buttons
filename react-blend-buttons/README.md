@@ -22,29 +22,24 @@ Demo on Netlify [Blend Buttons Demo](https://loving-edison-6a8a92.netlify.app/)
 
 ### `Usage`
 
-import BlendButton from "react-blend-buttons";
+    import BlendButton from "react-blend-buttons";
 
-//All props being utilized
+    //All props being utilized
 
-<BlendButton
+    <BlendButton
+    btnText={"Blend Button"}
+    colorMain={"goldenrod"}
+    borderRadius={"10px"}
+    padding={"3vw"}
+    fontSize={"18px"}
+    onClick={onClick}
+    />
 
-btnText={"Blend Button"}
+     Use the BlendButton component wherever you would use a button element.
 
-colorMain={"goldenrod"}
+    //No props
 
-borderRadius={"10px"}
-
-padding={"3vw"}
-
-fontSize={"18px"}
-
-/>
-
-Use the BlendButton component wherever you would use a button element.
-
-//No props
-
-<Blendbutton />
+    <Blendbutton />
 
 ### `Configuration`<br />
 

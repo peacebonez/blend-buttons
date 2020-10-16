@@ -1,8 +1,9 @@
 {
   "name": "react-blend-buttons",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "React buttons that adjust to parent's style.",
   "author": "Kevin Pariso <kmpariso12@gmail.com> https://github.com/peacebonez/",
+  "homepage": "https://github.com/peacebonez/react-blend-buttons/",
   "main": "./build/index.js",
   "scripts": {
     "build": "webpack"
@@ -17,7 +18,15 @@
     "webpack": "^5.1.2",
     "webpack-cli": "^4.0.0"
   },
-  "keywords": [],
+  "keywords": [
+    "button",
+    "react",
+    "react-component",
+    "react-hooks",
+    "ui",
+    "css",
+    "ui component"
+  ],
   "license": "ISC",
   "dependencies": {
     "react": "^16.14.0"

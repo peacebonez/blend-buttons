@@ -6,6 +6,7 @@ const BlendButton = ({
   borderRadius,
   padding,
   fontSize,
+  onClick,
 }) => {
   //buttons require a unique id as each one must be referenced to locate it's parent.
   //function credit https://gist.github.com/gordonbrander/2230317
@@ -70,6 +71,7 @@ const BlendButton = ({
     <button
       id={`blend-btn-${id}`}
       className="blend-btn"
+      onClick={onClick}
       onMouseOver={() => setIsHover(true)}
       onMouseOut={() => setIsHover(false)}
       onMouseDown={() => setIsMouseDown(true)}
