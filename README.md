@@ -24,7 +24,7 @@ Demo on Netlify [Blend Buttons Demo](https://loving-edison-6a8a92.netlify.app/)
 
     import BlendButton from "react-blend-buttons";
 
-    //All props being utilized
+    //All custom props being utilized
 
     <BlendButton
     btnText={"Blend Button"}
@@ -32,7 +32,6 @@ Demo on Netlify [Blend Buttons Demo](https://loving-edison-6a8a92.netlify.app/)
     borderRadius={"10px"}
     padding={"3vw"}
     fontSize={"18px"}
-    onClick={onClick}
     />
 
      Use the BlendButton component wherever you would use a button element.
@@ -69,7 +68,37 @@ You can configure your BlendButton via props...
   - Default value is button element default size.
 
 - onClick
+
   - Type: function
   - To user executes just as react's onClick handler executes.
+
+  ### Blend Buttons accept all the same attributes that html buttons accept but as props.
+
+name
+style
+value
+type
+autofocus
+disabled
+formenctype
+formmethod
+formaction
+formnovalidate
+formtarget
+
+    <BlendButton name={"email"} value={password} />
+
+### `Custom Styling`<br />
+
+All Blend Buttons are rendered with a class of "blend-btn". <br />
+
+Styling Blend Buttons in a style sheet **will not work** as the inline style built in the component will overwrite it. Instead, pass your own style object as a prop. This will merge your style object with the style object already in place. <br />
+
+    <BlendButton style={{fontFamily: "helvitica",  display: "block"}} />
+
+
+
+Each Blend button is rendered with a unique id of<br />
+"blend-btn-[4 digit unique id]"
 
 # Blend Buttons
