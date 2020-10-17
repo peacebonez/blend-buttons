@@ -74,19 +74,19 @@ You can configure your BlendButton via props...
 
   ### Blend Buttons accept all the same attributes that html buttons accept but as props.
 
-name
-style
-value
-type
-autofocus
-disabled
-formenctype
-formmethod
-formaction
-formnovalidate
-formtarget
+- name
+- style
+- value
+- type
+- autofocus
+- disabled
+- formenctype
+- formmethod
+- formaction
+- formnovalidate
+- formtarget
 
-    <BlendButton name={"email"} value={password} />
+  <BlendButton name={"email"} value={password} />
 
 ### `Custom Styling`<br />
 
