@@ -7,6 +7,18 @@ const BlendButton = ({
   padding,
   fontSize,
   onClick,
+  name,
+  style,
+  value,
+  type,
+  autofocus,
+  disabled,
+  formenctype,
+  formmethod,
+  formaction,
+  formnovalidate,
+  formtarget,
+
 }) => {
   //buttons require a unique id as each one must be referenced to locate it's parent.
   //function credit https://gist.github.com/gordonbrander/2230317
@@ -55,7 +67,7 @@ const BlendButton = ({
   const blendBtnHoverStyle = {
     ...blendBtnStyle,
     background: "transparent",
-    color: colorMain,
+    color: colorMain, 
     border: `solid 1px ${colorMain}`,
   };
 
@@ -67,24 +79,38 @@ const BlendButton = ({
     WebkitTextFillColor: "transparent",
   };
 
+  //if user wishes to overwrite current style
+  style = { ...blendBtnStyle, ...style };
+
   return (
     <button
       id={`blend-btn-${id}`}
       className="blend-btn"
+      name={name}
+      value={value}
+      type={type}
+      style={isHover ? blendBtnHoverStyle : style}
+      autoFocus={autofocus}
+      disabled={disabled}
+      formenctype={formenctype}
+      formmethod={formmethod}
+      formaction={formaction}
+      formnovalidate={formnovalidate}
+      formtarget={formtarget}
       onClick={onClick}
       onMouseOver={() => setIsHover(true)}
       onMouseOut={() => setIsHover(false)}
       onMouseDown={() => setIsMouseDown(true)}
       onMouseUp={() => setIsMouseDown(false)}
-      style={isHover ? blendBtnHoverStyle : blendBtnStyle}
+
     >
       {isBackgroundImage ? (
         <p style={isHover ? { color: colorMain } : backgroundImageText}>
           {btnText}
         </p>
       ) : (
-        btnText
-      )}
+          btnText
+        )}
     </button>
   );
 };

@@ -8,7 +8,8 @@ function App() {
   return (
     <div className="App">
       <div className="wrapper one">
-        <BlendButton btnText={"Handles no background"} fontSize={"18px"} />
+        <BlendButton btnText={"Handles no background"} fontSize={"18px"} 
+        />
       </div>
       <div className="wrapper two">
         <BlendButton
@@ -16,6 +17,9 @@ function App() {
           colorMain={"#FC766AFF"}
           borderRadius={"10px"}
           fontSize={"16px"}
+          name={"parent"}
+          value={"favorite button"}
+          type="reset"
         />
       </div>
       <div className="wrapper three">
@@ -56,6 +60,9 @@ function App() {
           fontSize={"20px"}
           padding={"10px"}
         />
+      </div>
+      <div className="wrapper seven">
+        <BlendButton name="blend" value="button" style={{color:"red", padding: "3vw", fontFamily: "helvitica", fontSize: "24px"}} />
       </div>
     </div>
   );
